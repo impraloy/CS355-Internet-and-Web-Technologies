@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Quattrocento&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: 'Quattrocento', serif;
+
+
+        }
+
+        h1 {
+            color: rgb(0, 217, 255);
+            font-size: 50px;
+            font-family: 'Gravitas One', cursive;
+            text-align: center;
+            text-shadow: 0px 2px 5px yellow;
+        
+        }
+
+        h2 {
+            font-family: 'Indie Flower', cursive;
+            color: black;
+
+        }
+
+        img {
+            margin-right: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            box-shadow: 0 2px 10px black;
+            border-radius: 3px;
+        }
+
+
+
+
+        #facts {
+            background-color: rgb(238, 235, 228);
+            /* border-color: black;
+            border-width: 1px;
+            border-style: solid; */
+            box-shadow: 0 0 2px black;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 3px;
+        }
+
+        #about {
+            background-color: rgb(238, 235, 228);
+            /* border-color: black;
+            border-width: 1px;
+            border-style: solid; */
+            box-shadow: 0 0 2px black;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 3px;
+
+            /* text-align: center; */
+
+
+        }
+
+        p {
+
+            padding: 20px;
+            background-color: mintcream;
+            text-align: justify;
+            box-shadow: 0 0 1px black;
+            line-height: 1.5;
+            border-radius: 3px;
+        }
+
+
+
+
+        table {
+            border-collapse: collapse;
+            box-shadow: 0px 1px 3px gray;
+            width: 100%;
+            border: none;
+            border-radius: 3px;
+        }
+
+        td {
+            width: auto;
+            height: auto;
+            border-left: 0.1px solid;
+            _border-left: 0.1px solid;
+        }
+
+
+        .tabel tr:nth-child(odd) {
+            background-color:mintcream;
+        }
+
+        .tabel tr:nth-child(even) {
+            background-color: rgb(236, 218, 185) ;
+        }
+
+        /* .tabel tr {
+            border-bottom: 2px solid #ddd;
+        } */
+
+        .tabel th:first-child,
+        .tabel td:first-child {
+            padding-left: 16px;
+        }
+
+
+        .tabel td,
+        .tabel th {
+            padding: 8px 8px;
+            display: table-cell;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .tabel th {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .tabel {
+            font-size: 13px !important;
+            /* border: 1px solid #ccc; */
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            display: table;
+        }
+
+        .header {
+            background-color: black;
+            color: white;
+        }
+
+        .column-1 {
+            font-weight: bold;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pokémon</h1>
+
+    <div id="about">
+        <h2>About Pokémon</h2>
+        <img src="./images/pokemon.jpg" alt="Pokemon wallpaper">
+
+        <p>Pokémon, also known as Pocket Monsters in Japan, is a Japanese media franchise managed by The Pokémon
+            Company, a company founded by Nintendo, Game Freak, and Creatures. The franchise was created by Satoshi
+            Tajiri in 1995, and is centered on fictional creatures called "Pokémon", which humans, known as Pokémon
+            Trainers, catch and train to battle each other for sport. Works within the franchise are set in the Pokémon
+            universe. The English slogan for the franchise is "Gotta Catch 'Em All".</p>
+
+        <p>The franchise began as Pocket Monsters Red and Green (later released outside of Japan as Pokémon Red and
+            Blue), a pair of video games for the original Game Boy handheld system that were developed by Game Freak and
+            published by Nintendo in February 1996. It soon became a media mix franchise adapted into various different
+            media Pokémon has since become
+            one of the highest-grossing media franchises of all time. The original video game series is the
+            second-best-selling video game franchise (behind Nintendo's Mario franchise) with more than 368 million
+            copies sold and one billion mobile downloads, and it spawned a hit anime television series that has become
+            the most successful video game adaptation with over 20 seasons and 1,000 episodes in 169 countries. In
+            addition, the Pokémon franchise includes the world's top-selling toy brand, the top-selling trading card
+            game with over 30.4 billion cards sold, an anime film series, a live-action film, books, manga comics,
+            music, merchandise, and a theme park. The franchise is also represented in other Nintendo media, such as the
+            Super Smash Bros. series, where various Pokémon characters are
+            playable.</p>
+
+
+        <h2>Pokemon Type Chart </h2>
+
+
+
+        <table class="tabel">
+            <thead>
+                <tr class="row-1 odd">
+                    <th class="header">Type</th>
+                    <th class="header">Super Effective Vs.</th>
+                    <th class="header">Not Very Effective Vs.</th>
+                    <th class="header">Resist Damage</th>
+                    <th class="header">Weak Vs.</th>
+                </tr>
+            </thead>
+            <tbody class="row-hover">
+                <tr class="row-2 even">
+                    <td class="column-1">Normal</td>
+                    <td class="column-2"></td>
+
+                    <td class="column-3">
+                        <ul>
+                            <li>Rock</li>
+                            <li>Steel</li>
+                            <li>Ghost (Imune)</li>
+                        </ul>
+                    </td>
+
+                    <td class="column-4">
+                        <ul>
+                            <li>Ghost (Immune) </li>
+                        </ul>
+                    </td>
+
+                    <td class="column-5">
+                        <ul>
+                            <li>Fighting </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr class="row-3 odd">
+                    <td class="column-1">Fighting</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Normal</li>
+                            <li>Ice</li>
+                            <li>Rock</li>
+                            <li>Steel</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Flying</li>
+                            <li>Poison</li>
+                            <li>Bug</li>
+                            <li>Psychic</li>
+                            <li>Ghost (Immune)</li>
+                        </ul>
+                    </td>
+
+                    <td class="column-4">
+                        <ul>
+                            <li>Rock</li>
+                            <li>Bug</li>
+                            <li>Dark</li>
+                        </ul>
+                    <td class="column-5">
+                        <ul>
+                            <li>Flying</li>
+                            <li>Posychic</li>
+                            <li>Fairy</li>
+                        </ul>
+                </tr>
+
+
+                <tr class="row-4 even">
+                    <td class="column-1">Flying</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Fighting</li>
+                            <li>Bug</li>
+                            <li>Grass</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Electric</li>
+                            <li>Rock</li>
+                            <li>Steel</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Fighting</li>
+                            <li>Bug</li>
+                            <li>Grass</li>
+                            <li>Ground(Immune)</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Rock</li>
+                            <li>Electric</li>
+                            <li>Ice</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr class="row-5 odd">
+                    <td class="column-1">Poison</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Grass</li>
+                            <li>Fairy</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Poison</li>
+                            <li>Ground</li>
+                            <li>Rock</li>
+                            <li>Ghost</li>
+                            <li>Steel (Immune)</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Fighting</li>
+                            <li>Poison</li>
+                            <li>Bug</li>
+                            <li>Grass</li>
+                            <li>Fairy</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Ground</li>
+                            <li>Psychic</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr class="row-6 even">
+                    <td class="column-1">Ground</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Poison</li>
+                            <li>Rock</li>
+                            <li>Steel</li>
+                            <li>Fire</li>
+                            <li>Electric</li>
+                        </ul>
+                    </td>
+
+                    <td class="column-3">
+                        <ul>
+                            <li>Bug</li>
+                            <li>Grass</li>
+                            <li>Flying (Immune)</li>
+                        </ul>
+                    </td>
+
+                    <td class="column-4">
+                        <ul>
+                            <li>Poison</li>
+                            <li>Rock</li>
+                            <li>Electric (Immune)</li>
+                        </ul>
+                    </td>
+
+                    <td class="column-5">
+                        <ul>
+                            <li>Water</li>
+                            <li>Grass</li>
+                            <li>Ice</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr class="row-7 odd">
+                    <td class="column-1">Rock</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Flying</li>
+                            <li>Fire</li>
+                            <li>Bug</li>
+                            <li>Ice</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Fighting </li>
+                            <li>Ground</li>
+                            <li>Steel</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Normal</li>
+                            <li>Fire</li>
+                            <li>Poison</li>
+                            <li>Flying</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Water</li>
+                            <li>Grass</li>
+                            <li>Fighting</li>
+                            <li>Ground</li>
+                            <li>Steel</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row-8 even">
+                    <td class="column-1">Bug</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Grass</li>
+                            <li>Psychic</li>
+                            <li>Dark</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Flying</li>
+                            <li>Poison</li>
+                            <li>steel</li>
+                            <li>Fairy</li>
+                            <li>Ghost</li>
+                            <li>Fire</li>
+                            <li>Fighting</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Fightig</li>
+                            <li>Ground</li>
+                            <li>Grass</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Flying</li>
+                            <li>Rock</li>
+                            <li>Fire</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row-9 odd">
+                    <td class="column-1">Ghost</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Psychic</li>
+                            <li>Ghost</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Dark</li>
+                            <li>Normal (Immune)</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Poison</li>
+                            <li>Normal (Immune)</li>
+                            <li>Fighting (Immune)</li>
+                        </ul>
+                    </td>
+
+                    <td class="Column-5">
+                        <ul>
+                            <li>Ghost</li>
+                            <li>Dark</li>
+                        </ul>
+
+                    </td>
+                </tr>
+
+                <tr class="row-10 even">
+                    <td class="column-1">Steel</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Ice</li>
+                            <li>Rock</li>
+                            <li>Fairy</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Water</li>
+                            <li>Fire</li>
+                            <li>steel</li>
+                            <li>Electric</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Flying</li>
+                            <li>Poison</li>
+                            <li>steel</li>
+                            <li>Fairy</li>
+                            <li>Psychic</li>
+                            <li>Ice</li>
+                            <li>Normal</li>
+                            <li>Dragon</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Fire</li>
+                            <li>Fighting</li>
+                            <li>Ground</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row-11 odd">
+                    <td class="column-1">Fire</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Bug</li>
+                            <li>Steel</li>
+                            <li>Grass</li>
+                            <li>Ice</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Rock</li>
+                            <li>Fire</li>
+                            <li>Water</li>
+                            <li>Dragon</li>
+                        </ul>
+                    </td>
+
+                    <td class="column-4">
+                        <ul>
+                            <li>Bug</li>
+                            <li>Ice</li>
+                            <li>Fire</li>
+                            <li>Fairy</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Ground </li>
+                            <li>Rock</li>
+                            <li>Water</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row-12 even">
+                    <td class="column-1">Water</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Ground </li>
+                            <li>Rock</li>
+                            <li>Fire</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Dragon</li>
+                            <li>Grass</li>
+                            <li>Water</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Fire </li>
+                            <li>Ice</li>
+                            <li>Steel</li>
+                            <li>Water</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Electric </li>
+                            <li>Grass</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row-13 odd">
+                    <td class="column-1">Grass</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Ground </li>
+                            <li>Rock</li>
+                            <li>water</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Flying </li>
+                            <li>Poison</li>
+                            <li>Bug</li>
+                            <li>Steel</li>
+                            <li>Fire</li>
+                            <li>Grass</li>
+                            <li>Dragon</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>ater </li>
+                            <li>Grass</li>
+                            <li>Electric</li>
+                            <li>Ground</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Flying</li>
+                            <li>Poison</li>
+                            <li>Bug</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row-14 even">
+                    <td class="column-1">Electric</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Flying </li>
+                            <li>Water</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Grass</li>
+                            <li>Electric</li>
+                            <li>Dragon</li>
+                            <li>Ground (Immune)</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Flying </li>
+                            <li>Steel</li>
+                            <li>ELectric</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Ground </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row-15 odd">
+                    <td class="column-1">Psychic</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Fighting </li>
+                            <li>Poison</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Steel </li>
+                            <li>Psychic</li>
+                            <li>Dark (Immune)</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Fighting </li>
+                            <li>Psychic</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Bug </li>
+                            <li>Ghost</li>
+                            <li>Dark</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row-16 even">
+                    <td class="column-1">Ice</td>
+                    <td class="column-2">
+
+                        <ul>
+                            <li>Ground </li>
+                            <li>Flying</li>
+                            <li>Grass</li>
+                            <li>Dragon</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Steel </li>
+                            <li>Fire</li>
+                            <li>Water</li>
+                            <li>Ice</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Ice </li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Fighting </li>
+                            <li>Rock</li>
+                            <li>Fire</li>
+                            <li>Steel</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row-17 odd">
+                    <td class="column-1">Dragon</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Dragon </li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Steel </li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+
+                        <ul>
+                            <li>Electric</li>
+                            <li>Grass</li>
+                            <li>Fire</li>
+                            <li>Water</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Ice </li>
+                            <li>Dragon</li>
+                            <li>Fairy</li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr class="row-18 even">
+                    <td class="column-1">Dark</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Grass </li>
+                            <li>Psychic</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Fighting </li>
+                            <li>Dark>
+                            <li>Fairy</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Ghost </li>
+                            <li>Dark</li>
+                            <li>Psychic (Immune)</li>
+                            <li>Steel</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Fighting </li>
+                            <li>Bug</li>
+                            <li>Fairy</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr class="row-19 odd">
+                    <td class="column-1">Fairy</td>
+                    <td class="column-2">
+                        <ul>
+                            <li>Fighting </li>
+                            <li>Dragon</li>
+                            <li>Dark</li>
+                        </ul>
+                    </td>
+                    <td class="column-3">
+                        <ul>
+                            <li>Poison </li>
+                            <li>Fire</li>
+                            <li>Steel</li>
+                        </ul>
+                    </td>
+                    <td class="column-4">
+                        <ul>
+                            <li>Fighting </li>
+                            <li>Bug</li>
+                            <li>Dragon (Immune)</li>
+                        </ul>
+                    </td>
+                    <td class="column-5">
+                        <ul>
+                            <li>Poison </li>
+                            <li>Steel</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+    <div id="facts">
+        <h2>Why I Like Pokémon </h2>
+        <ul>
+            <li>Pokémon Go is changing the dynamics of social engagement with video games.</li>
+            <li>Pokémon Go has powerful implications for positive community health.</li>
+            <li>Pokémon Go is inspiring conscious innovation and collaboration.</li>
+
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

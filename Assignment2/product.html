@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product seller</title>
+
+    <!-- fronts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        /* START MOBILE STYLES (0px - 767px) */
+
+        * {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+        }
+
+        .container {
+            padding: 0px;
+            height: 100%;
+        }
+
+        #header {
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            color: white;
+            background-color: rgb(0, 114, 206);
+            font-size: 50px;
+            font-weight: bold;
+            max-width: 100%;
+            box-shadow: 0 0 10px black;
+        }
+
+
+        #tittle {
+            color: #4c56e4;
+            text-align: center;
+            padding: 10px 0;
+            font-family: 'Reggae One', cursive;
+        }
+
+        #RelatedHeader {
+            text-align: center;
+            padding: 10px 0;
+
+        }
+
+        #PromoCode {
+            font-size: 20px;
+            border-radius: 5px;
+            width: 70%;
+            text-align: center;
+            padding: 10px 0 10px 0;
+            margin: 5px auto;
+            margin-top: 20px;
+            background-color: #35fcaf;
+            color: white;
+            box-shadow: 0 2px 5px #35fcaf;
+            position: relative;
+            border: 1px solid #35eba5;
+            font-family: 'Nova Round', cursive;
+        }
+
+
+        #main-img {
+            width: 96%;
+            border-radius: 5px;
+            filter: drop-shadow(0 5px 8px #3a45e6);
+            _box-shadow: 0 3px 8px black;
+        }
+
+        #mainProduct {
+            text-align: center;
+        }
+
+        #price-section {
+            padding: 5% 0;
+            padding-left: 5%;
+            width: auto;
+        }
+
+        #price {
+            font-size: 24px;
+            padding-bottom: 10px;
+            font-weight: bold;
+            _font-family: 'Reggae One', cursive;
+
+        }
+
+        #h_product-title {
+            visibility: hidden;
+            height: 0;
+        }
+
+        ol {
+            list-style: none;
+        }
+
+        ol>li {
+            float: left;
+            margin: 0px;
+            margin-right: 3px;
+            width: 23px;
+        }
+
+        #r-msg {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .checked {
+            color: orange;
+
+        }
+
+        #productDetails {
+            width: auto;
+            padding: 0 5%;
+            font-size: 18px;
+            line-height: 1.4em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #productDetails div,
+        ul>li {
+            padding: 3% 0;
+
+        }
+
+        ul {
+            margin-left: 5%;
+        }
+
+        #RelatedHeader {
+            padding: 30px 0;
+        }
+
+
+        #RelatedProducts .products {
+            border-radius: 5px;
+            width: 75%;
+            padding: 4.9%;
+            margin: 5% auto;
+            text-align: center;
+            box-shadow: 0 2px 5px gray;
+            position: relative;
+            border: 0.1px solid black;
+            background: white;
+        }
+
+        .products>img {
+
+            margin-bottom: 10%;
+            width: 75%;
+            _filter: drop-shadow(2px 2px 2px black);
+        }
+
+        /* .name {
+            background-color: greenyellow;
+            padding: 3%;
+            border-radius: 10px;
+            box-shadow: 0 2px 2px black;
+            width: auto;
+        } */
+
+        .points {
+            font-weight: bold;
+        }
+
+
+        /* .products {
+            position: relative;
+            width: 400px;
+        } */
+
+        .image__img {
+            display: block;
+            width: 100%;
+        }
+
+        .overlayImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 114, 206, 0.6);
+            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+
+
+
+        .overlayImage>* {
+            transform: translateY(20px);
+            transition: transform 0.25s;
+        }
+
+        .overlayImage:hover {
+            opacity: 1;
+            border-radius: 5px;
+        }
+
+        .overlayImage:hover>* {
+            transform: translateY(0);
+        }
+
+        /* .overlayImage>.name {
+            opacity: 0;
+        } */
+
+        .ImageTittle {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .ImageDescription {
+            font-size: 1.25em;
+            margin-top: 0.25em;
+        }
+
+        .related-section {
+            height: auto;
+            width: 100%;
+            background: rgb(241, 245, 255);
+            float: left;
+        }
+
+
+
+        /* If device width is greater than or equal to 768px,;*/
+        @media(min-width: 768px) {
+
+            #header {
+                text-align: center;
+                color: white;
+                font-size: 50px;
+                font-weight: bold;
+                text-align: center;
+
+            }
+
+            #img-promocode {
+                float: left;
+                width: 50%;
+                margin-top: 7px;
+                padding: 0 2% 10% 0;
+            }
+
+            #main-img {
+                border-radius: 5px;
+            }
+
+            #price-section {
+                width: 40%;
+                float: left;
+                padding-top: 0px;
+                padding-bottom: 10px;
+                padding-left: 0;
+            }
+
+            #h_product-title {
+                _width: 40%;
+                visibility: visible;
+                height: 50px;
+                font-size: 24px;
+                padding-bottom: 10px;
+                font-family: 'Reggae One', cursive;
+                color: rgb(0, 114, 206);
+            }
+
+
+            #tittle {
+                visibility: hidden;
+                padding: 0 0 10px 0;
+                margin: 0;
+                height: 0;
+
+            }
+
+            #productDetails {
+                float: left;
+                width: 42%;
+                margin: 0;
+                padding: 0;
+                font-size: 18px;
+                line-height: 1.4em;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            #RelatedHeader,
+            #RelatedProducts {
+                float: left;
+            }
+
+            #RelatedHeader {
+                font-size: 22px;
+
+            }
+
+            #RelatedProducts {
+                margin: 0 auto;
+            }
+
+            #RelatedProducts>.products {
+                float: left;
+                width: 36%;
+                margin: 2%;
+            }
+
+        }
+
+        footer {
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+            background: black;
+            height: 50px;
+            bottom: 0;
+            float: left;
+            color: white;
+        }
+
+        /* If device width is greater than or equal to 992px,;*/
+        @media(min-width: 992px) {
+
+            #RelatedProducts {
+                margin: 0;
+                text-align: center;
+                padding: 0;
+
+                margin-bottom: 20px;
+            }
+
+            #RelatedProducts>.products {
+                float: none;
+                display: inline-block;
+                width: 23%;
+                padding: 0;
+                padding-top: 20px;
+                margin: 5px;
+            }
+
+            #main-img {
+                width: 70%;
+            }
+        }
+
+
+
+        @media(min-width: 2380px) {
+            #productDetails {
+                width: 1000px;
+
+            }
+        }
+
+        footer>p {
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h3>GameZone</h3>
+    </div>
+    <div class="container">
+
+        <div id="tittle">
+            <h2>PLAYSTATION 5</h2>
+        </div>
+
+        <div id="img-promocode">
+            <div id="mainProduct">
+                <img id="main-img" src="./images/Playstation-5-games-console-transparent-background-png-image.png"
+                    alt="playStation">
+            </div>
+
+            <div id="PromoCode">
+                <h3>Use Promo Code "30OFF" To Get 30% Off!!!</h3>
+            </div>
+        </div>
+
+        <div id="price-section">
+            <div id="h_product-title">
+                <h2>Playstation 5</h2>
+            </div>
+            <div id="price">
+                <p>Price: $499.00</p>
+            </div>
+
+            <div id="reviews">
+                <ol>
+                    <li><span class="fa fa-star checked fa-lg"></span></li>
+                    <li><span class="fa fa-star checked fa-lg"></span></li>
+                    <li><span class="fa fa-star checked fa-lg"></span></li>
+                    <li><span class="fa fa-star checked fa-lg"></span></li>
+                    <li><span class="fa fa-star-half-o checked fa-lg"></span></li>
+                </ol>
+                <span id="r-msg"> 15,503 reviews.</span>
+            </div>
+        </div>
+
+        <div id="productDetails">
+
+            <div class="paragraph">The Sony PlayStation 5 console has finally arrived, and after much anticipation and
+                hype, it’s safe to say
+                the
+                PlayStation 5 has absolutely delivered. </div>
+
+
+            <div>
+                <ul>
+                    <li class="features"> <span class="points">Lightning Speed</span> - Harness the power of a custom
+                        CPU, GPU, and SSD with
+                        Integrated I/O that rewrite the
+                        rules of what a
+                        PlayStation® console can do.</li>
+                    <li class="features"> <span class="points">Breathtaking Immersion</span> - Discover a deeper gaming
+                        experience with support for
+                        haptic feedback, adaptive
+                        triggers, and 3D
+                        Audio technology.</li>
+                    <li class="features"> <span class="points">Integrated I/O</span> - The custom integration of the
+                        PS5™ console's systems lets
+                        creators pull data from the
+                        SSD so quickly
+                        that they can design games in ways never before possible.</li>
+                    <li class="features"><span class="points">Ray Tracing</span> - Immerse yourself in worlds with a new
+                        level of realism as rays of
+                        light are individually
+                        simulated,
+                        creating true-to-life shadows and reflections in supported PS5™ games.</li>
+                    <li class="features"><span class="points">Up to 8K Output</span> - PS5™ consoles support 8K Output,
+                        so you can play games on
+                        your 4320p resolution
+                        display.</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="related-section">
+            <div id="RelatedHeader">
+                <h2>Related Products</h2>
+            </div>
+
+
+            <div id="RelatedProducts">
+                <div class="products">
+                    <img src="./images/Sony-DualSense-Wireless-Controller.jpg" alt="Controller">
+                    <div class="overlayImage">
+                        <div class="ImageTittle">Sony DualSense</div>
+                        <p class="ImageDescription">
+                            Wireless Controller
+                        </p>
+                    </div>
+                    <!-- <div class="name">Sony DualSense Wireless Controller</div> -->
+                </div>
+
+                <div class="products">
+                    <img class="prod-img-1" src="./images/Arctis-3-Console-Edition-Wired-Gaming-Headset.jpg"
+                        alt="Arctis 3 Wireless Headset">
+                    <div class="overlayImage">
+                        <div class="ImageTittle">Arctis 3</div>
+                        <p class="ImageDescription">
+                            Wireless Headset
+                        </p>
+                    </div>
+                    <!-- <div class="name">PULSE 3D™ Wireless Headset</div> -->
+                </div>
+
+                <div class="products">
+                    <img src="./images/NFL-Pittsburgh-Steelers-Skin-Bundle-for-PlayStation-5.jpg"
+                        alt="NFL Pittsburgh Steelers Skin Bundle for PlayStation 5 Digital Edition">
+                    <div class="overlayImage">
+                        <div class="ImageTittle">NFL Pittsburgh</div>
+                        <p class="ImageDescription">
+                            Steelers Skin Bundle
+                        </p>
+                    </div>
+                    <!-- <div class="name">NFL Pittsburgh Steelers Skin Bundle</div> -->
+                </div>
+
+                <div class="products">
+                    <img class="prod-img-2"
+                        src="./images/Geode-Turquoise-Wate-Skin-Bundle-for-PlayStation-5-Digital-Edition-color.jpg"
+                        alt="Geode Turquoise Watercolor Skin Bundle for PlayStation 5">
+                    <div class="overlayImage">
+                        <div class="ImageTittle">Geode Turquoise</div>
+                        <p class="ImageDescription">
+                            Watercolor Skin Bundle
+                        </p>
+                    </div>
+                    <!-- <div class="name">Geode Turquoise Watercolor Skin Bundle</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2021</p>
+    </footer>
+</body>
+
+</html>

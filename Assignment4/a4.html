@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Java contactInfos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <h1 class="col-12">Contacts</h1>
+            <h2 class="col-12 mt-4">New Contact</h2>
+            <div class="col-12 mt-4">
+                <form id="contact-form">
+                    <div class="row">
+
+                        <div class="col">
+                            <label for="fname" class="sr-only">First Name:</label>
+                            <input type="text" class="form-control" id="fname" placeholder="First Name">
+                        </div> <!-- .col -->
+
+                        <div class="col">
+                            <label for="lname" class="sr-only">Last Name:</label>
+                            <input type="text" class="form-control" id="lname" placeholder="Last Name">
+                        </div> <!-- .col -->
+
+                        <div class="col">
+                            <label for="email" class="sr-only">Email:</label>
+                            <input type="text" class="form-control" id="email" placeholder="Email">
+                        </div> <!-- .col -->
+
+                        <div class="col">
+                            <button role="button" type="submit" class="btn btn-primary btn-lg">Add</button>
+                        </div> <!-- .col -->
+
+                    </div> <!-- .form-row -->
+                </form>
+            </div> <!-- .col -->
+        </div> <!-- .row -->
+
+        <div class="row">
+            <h2 class="col-12 mt-4">List:</h2>
+        </div> <!-- .row -->
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary btn-icon-split" id="show-three-btn"
+                    class="btn btn-outline-primary mb-3">Show First Three Contacts</button>
+                <button class="btn btn-primary btn-icon-split" id="show-all-btn"
+                    class="btn btn-outline-primary mb-3">Show All Contacts</button>
+                <button class="btn btn-danger btn-icon-split" id="delete-btn" class="btn btn-outline-danger mb-3">Delete
+                    All</button>
+            </div> <!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col">
+                <ul class="list-group" id="contact-list">
+                    <!-- Below is the template that all contacts should follow -->
+                    <!-- <li class="list-group-item">Student, CUNY (cunystudent@cuny.edu)</li> -->
+                </ul>
+            </div> <!-- .col -->
+
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+    <script >
+
+       // Use this array to keep track of contacts
+        let contacts = [];
+
+        //variables
+        let submission = document.getElementById("contact-form");
+        let fName = document.getElementById("fname");
+        let lName = document.getElementById("lname");
+        let email = document.getElementById("email");
+        let ShowThreeContacts = document.getElementById("show-three-btn");
+        let ShowAllContacts = document.getElementById("show-all-btn");
+        let DeleteAll = document.getElementById("delete-btn");
+        let cList = document.getElementById("contact-list");
+
+        let mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        let nameFormat = /^[a-zA-Z ]+$/;
+
+        //EventListners
+        submission.addEventListener("submit", e => {
+                e.preventDefault();
+                
+
+                let contactInfo;
+                console.log("Contact submit attempted");
+
+                if (fName.value != "" && fName.value.match(nameFormat) && lName.value != "" && lName.value.match(nameFormat) && email.value != "" && email.value.match(mailFormat)) {
+
+                    contactInfo = {
+                        firstName: fName.value, lastName: lName.value, email: email.value
+                    };
+
+                    contacts.push(contactInfo);
+                }
+
+                submission.reset()
+                console.log(contacts);
+            });
+
+            //
+            ShowAllContacts.addEventListener("click", e => {
+                let list = contacts;
+
+                cList.innerHTML = "";
+
+                for (i = 0; i < contacts.length; i++) {
+
+                    console.log("Full list of contacts");
+
+                    cList.innerHTML += ("<li class=\"list-group-item\">" + list[i].firstName + " " + list[i].lastName + ", " + list[i].email + "</li>");
+
+                }
+
+            });
+
+
+            ShowThreeContacts.addEventListener("click", e => {
+
+
+                let list = contacts;
+
+                cList.innerHTML = "";
+
+                if (list.length != 0) {
+                    //checking value is less than 3 ot not
+                    for (i = 0; i < Math.min(3, list.length); i++) {
+
+                        console.log("First three contact list");
+
+                        cList.innerHTML += ("<li class=\"list-group-item\">" + list[i].firstName + " " + list[i].lastName + ", " + list[i].email + "</;i>");
+
+                    }
+
+                }
+            });
+
+
+            DeleteAll.addEventListener("click", e => {
+
+                contacts = [];
+                cList.innerHTML = "";
+
+                console.log(contacts);
+
+            });
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
